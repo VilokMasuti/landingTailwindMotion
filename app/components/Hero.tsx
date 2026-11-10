@@ -2,6 +2,7 @@ import Container from "./Continer";
 import SubHeading from "./Headings/SubHeading";
 import TitleHeading from "./Headings/TitleHeading";
 import LandingImges from "./LandingImges";
+import LogoClude from "./LogoClude";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 
@@ -23,9 +24,10 @@ const Hero = () => {
         </Button>
         <ModeToggle />
       </article>
-      <section className=" ">
-        <LandingImges />
-      </section>
+
+      <LandingImges />
+
+      <LogoClude />
     </Container>
   );
 };
