@@ -24,7 +24,7 @@ const Nav = () => {
 
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <nav className="w-full px-4 py-5 relative shadow-input ">
+    <nav className=" px-4 py-5 relative shadow-input ">
       <Container className=" ">
         <header className="  flex  items-center justify-between ">
           <Logo />
@@ -109,7 +109,7 @@ const Nav = () => {
 
             <div
               aria-hidden="true"
-              className="h-px w-full shrink-0 bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700"
+              className="h-px w-full  shrink-0 bg-linear-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700"
             />
             <div className=" flex mt-10 gap-10 flex-col">
               {navlinks.map((link) => (

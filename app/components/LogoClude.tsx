@@ -13,14 +13,14 @@ const logos = [
 const LogoClude = () => {
   return (
     <section
-      className="  mx-auto items-center justify-center  flex flex-col my-42 sm:my-60 md:my-70
+      className="  mx-auto items-center justify-center  flex flex-col mt-42 sm:mt-60 md:mt-70
     "
     >
       <h2 className="bg-gradient-to-t  font-display  text-center max-w-xl  font-medium  text-lg from-taupe-50 to-zinc-900 bg-clip-text text-transparent">
         Trusted by modern operators across industries. From pilot to scale
         without chaos.
       </h2>
-      <div className="mx-auto my-10 grid w-full max-w-3xl grid-cols-1 items-center justify-items-center gap-x-16 gap-y-12 px-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-10 grid w-full max-w-3xl grid-cols-1 items-center justify-items-center gap-x-16 gap-y-12 px-6 sm:grid-cols-2 lg:grid-cols-3">
         {logos.map((logo, index) => (
           <motion.div
             key={logo.title}

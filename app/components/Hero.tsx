@@ -1,14 +1,13 @@
 import Container from "./Continer";
 import SubHeading from "./Headings/SubHeading";
 import TitleHeading from "./Headings/TitleHeading";
-import LandingImges from "./LandingImges";
-import LogoClude from "./LogoClude";
+
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <Container className=" my-20  min-h-140">
+    <Container className=" my-20  ">
       <TitleHeading as="h1">
         Agents that do the <br /> Approvals that keep you safe.
       </TitleHeading>
@@ -24,10 +23,6 @@ const Hero = () => {
         </Button>
         <ModeToggle />
       </article>
-
-      <LandingImges />
-
-      <LogoClude />
     </Container>
   );
 };
