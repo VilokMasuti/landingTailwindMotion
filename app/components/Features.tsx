@@ -3,6 +3,7 @@ import Card, { CardContiner, CardSkeleton, CardTitle } from "./Card";
 import SubHeading from "./Headings/SubHeading";
 import TitleHeading from "./Headings/TitleHeading";
 import Skeleton2 from "./Sekeliton/Skeleton2";
+import { Skelition3 } from "./Sekeliton/Skelition3";
 import Skeliton1 from "./Sekeliton/Skeliton1";
 
 const Features = () => {
@@ -23,7 +24,7 @@ const Features = () => {
         </SubHeading>
       </div>
 
-      <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 my-10 md:my20">
+      <div className=" grid grid-cols-1 lg:grid-cols-3 gap-5 my-10 md:my-20">
         <Card className="rounded-tl-3xl rounded-br-3xl ">
           <CardSkeleton>
             <Skeliton1 />
@@ -37,7 +38,9 @@ const Features = () => {
         </Card>
 
         <Card>
-          <CardSkeleton></CardSkeleton>
+          <CardSkeleton>
+            <Skelition3 />
+          </CardSkeleton>
           <CardContiner className=" flex gap-10 ">
             <CardTitle>Automate Handoffs, Reduce Ops Frictions</CardTitle>
             <button className=" size-5 md:size-10 ">
