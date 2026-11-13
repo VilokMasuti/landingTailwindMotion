@@ -2,7 +2,6 @@ import Container from "./Continer";
 import SubHeading from "./Headings/SubHeading";
 import TitleHeading from "./Headings/TitleHeading";
 
-import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -16,12 +15,11 @@ const Hero = () => {
         <br />
         outcomes - without changing how your teams work.
       </SubHeading>
-      <article className=" flex gap-5 font-inter">
+      <article className="  flex flex-wrap gap-5 font-inter">
         <Button className="shadow-brand px-5">Start your free trial</Button>
         <Button className="font-inter" variant="outline">
           View role based demos
         </Button>
-        <ModeToggle />
       </article>
     </Container>
   );

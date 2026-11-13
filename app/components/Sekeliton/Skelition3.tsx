@@ -13,7 +13,7 @@ export const Skelition3 = () => {
         transform: "rotateX(14deg) rotateY(20deg) rotateZ(-20deg)    ",
       }}
       className={cn(
-        "max-w-[85%] perspective-distant h-full my-auto bg-neutral-100 mx-auto w-full p-3 rounded-2xl dark:border-neutral-700 shadow-2xl flex flex-col",
+        "max-w-[85%] perspective-distant h-full my-auto bg-neutral-100 mx-auto w-full p-3 rounded-2xl  border  border-neutral-300 dark:border-neutral-700 shadow-2xl flex flex-col mask-radial-from-50% mask-b-from-50%",
         "[--pattern-fg:var(--color-neutral-950)]/5 dark:[--pattern-fg:var(--color-white)]/10",
         "  translate-x-10   ",
       )}
@@ -104,7 +104,7 @@ export const Row = ({
   };
 
   return (
-    <div className="flex items-center justify-between  px-4 py-2">
+    <div className="flex items-center justify-between  px-4 py-1">
       <div className="flex items-center gap-2 mt-2">
         <div
           className={`size-4 flex items-center justify-center [&_svg]:text-current ${iconColors[variant]}`}
