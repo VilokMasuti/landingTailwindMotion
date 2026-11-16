@@ -2,6 +2,8 @@
 import { ChildClassPros } from "@/types/type";
 import { cn } from "cn";
 import Container from "./Continer";
+import First from "./skelton/First";
+import Second from "./skelton/Second";
 
 const FeatuersSecond = () => {
   return (
@@ -12,21 +14,25 @@ const FeatuersSecond = () => {
             <h1 className=" font-bold text-lg capitalize font-display ">
               Agent studio
             </h1>
-            <Carddis className=" font-inter text-neutral-400 mt-2">
+            <Carddis className=" font-inter text-neutral-600 mt-2">
               Design, launch and customize AI agents for marketing, sales,
               support and ops, built around your workflows.
             </Carddis>
-            <CardSkeleton>S</CardSkeleton>
+            <CardSkeleton className=" mt-8">
+              <First />
+            </CardSkeleton>
           </div>
           <div className="p-4  ">
             <h1 className=" font-display  capitalize font-semibold text-lg">
               Multi-Agent Orchestration
             </h1>
-            <Carddis className=" ">
+            <Carddis className="font-inter text-neutral-600 mt-2 ">
               Coordinate multiple agents across workflows using memory,
               interrupts, and conditional logic.
             </Carddis>
-            <CardSkeleton>S</CardSkeleton>
+            <CardSkeleton>
+              <Second />
+            </CardSkeleton>
           </div>
         </div>
       </Container>
@@ -46,7 +52,7 @@ const CardSkeleton = ({
   return (
     <div
       className={cn(
-        "h-80 md:h-80 relative  overflow-hidden perspective-distant ",
+        "h-80 md:h-80 relative flex flex-col  overflow-hidden perspective-distant ",
         className,
       )}
     >
