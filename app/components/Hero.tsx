@@ -1,13 +1,12 @@
 import Container from "./Continer";
 import SubHeading from "./Headings/SubHeading";
 import TitleHeading from "./Headings/TitleHeading";
-import LandingImges from "./LandingImges";
-import { ModeToggle } from "./mode-toggle";
+
 import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <Container className=" my-20  min-h-140">
+    <Container className=" my-20  ">
       <TitleHeading as="h1">
         Agents that do the <br /> Approvals that keep you safe.
       </TitleHeading>
@@ -16,16 +15,12 @@ const Hero = () => {
         <br />
         outcomes - without changing how your teams work.
       </SubHeading>
-      <article className=" flex gap-5 font-inter">
+      <article className="  flex flex-wrap gap-5 font-inter">
         <Button className="shadow-brand px-5">Start your free trial</Button>
         <Button className="font-inter" variant="outline">
           View role based demos
         </Button>
-        <ModeToggle />
       </article>
-      <section className=" ">
-        <LandingImges />
-      </section>
     </Container>
   );
 };
