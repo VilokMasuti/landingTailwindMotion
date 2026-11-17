@@ -80,7 +80,7 @@ export const Card = ({
     <motion.div
       variants={item}
       className={cn(
-        " p-4 shadow-black/10 gap-4  border bg-white dark:bg-neutral-800 border-transparent ring-1 rounded-[16px] ring-black/10 flex items-start",
+        " p-4 shadow-black/10 gap-4  border bg-white  border-transparent ring-1 rounded-[16px] ring-black/10 flex items-start",
         className,
       )}
     >
