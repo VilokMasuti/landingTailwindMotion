@@ -8,8 +8,8 @@ import { LogoSvg } from "../Logo";
 const Second = () => {
   return (
     <div className=" flex-1 rounded-t-3xl flex items-center justify-center  w-full h-full absolute inset-x-0 p-2  transform-3d perspective-distant    translate-x-10">
-      <Circle className="flex items-center justify-center border-neutral-200 shadow-sm  ">
-        <LogoSvg className="size-10 text-neutral-400 rotate-x-180" />
+      <Circle className="flex items-center justify-center border-neutral-200  bg-black shadow-brand  ">
+        <LogoSvg className="size-10  text-white rotate-x-180" />
         <div
           className="size-8 flex absolute inset-0 m-auto items-center justify-center
           rounded-sm animate-orbit [--translate-position:120px] [--orbit-duration:20s]"
@@ -33,7 +33,7 @@ const Second = () => {
          animate-orbit [--translate-position:200px] [--orbit-duration:40s] "
         >
           <SkeletonCard
-            className="bg-white  h-20  "
+            className=" h-20  "
             icon={<IconCircleDashedCheck className="size-4" />}
             title="Campaign Planner"
             description="Creates clear, ready-to-use campaign briefs using product info"
@@ -44,7 +44,7 @@ const Second = () => {
          animate-orbit [--translate-position:130px] [--orbit-duration:25s] scale-[1.1]"
         >
           <SkeletonCard
-            className="bg-white  h-10 p-2 rounded-md "
+            className=" h-10 p-2 rounded-md "
             icon={<IconCircleDashedCheck className="size-4" />}
             title="Ready made solutions"
           />
@@ -64,7 +64,7 @@ const Circle = ({ className, children }: ChildClassPros) => {
   return (
     <div
       className={cn(
-        "size-50 z-10  border border-transparent bg-white  rounded-full absolute inset-0 m-auto zoom-90 ",
+        "size-50 z-10  border border-transparent  rounded-full absolute shadow-input inset-0 m-auto zoom-90 ",
         className,
       )}
       style={{
