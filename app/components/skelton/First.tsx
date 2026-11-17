@@ -2,6 +2,7 @@
 
 import { cn } from "cn";
 import icon from "lucide-react/icons/";
+import { motion } from "motion/react";
 import {
   HubSpot,
   HumanInTheLoop,
@@ -10,10 +11,30 @@ import {
   WorkflowSettings,
 } from "../icons";
 
+const item = {
+  hidden: { opacity: 0, y: -24 },
+  show: { opacity: 1, y: 0 },
+};
 const First = () => {
   return (
     <div className=" flex-1 rounded-t-3xl bg-neutral-100 border border-neutral-200 max-w-sm mx-auto w-full h-full absolute inset-x-0 p-px">
-      <div className=" flex flex-col gap-2 p-1 mt-2">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.91,
+              type: "spring",
+              mass: 3,
+              ease: "easeInOut",
+            },
+          },
+        }}
+        className=" flex flex-col gap-2 p-1 mt-2"
+      >
         <Card
           icon={<HumanInTheLoop className=" text-white" />}
           iconbg="bg-blue-600"
@@ -26,8 +47,13 @@ const First = () => {
           title=" Define Processing Logic"
           subtitle="Create workflows, decision points, and conditional actions for each task."
         />
-        <Card className=" " />
-      </div>
+        <Card
+          icon={<WorkflowSettings className=" text-white" />}
+          iconbg="bg-red-600"
+          title="  Processing Logic Out"
+          subtitle="Create workflows, decision points, and conditional actions for each task."
+        />
+      </motion.div>
     </div>
   );
 };
@@ -51,7 +77,8 @@ export const Card = ({
   iconbg,
 }: Partial<CardPro>) => {
   return (
-    <div
+    <motion.div
+      variants={item}
       className={cn(
         " p-4 shadow-black/10 gap-4  border bg-white dark:bg-neutral-800 border-transparent ring-1 rounded-[16px] ring-black/10 flex items-start",
         className,
@@ -76,7 +103,7 @@ export const Card = ({
           <Tag icon={<Sheets />} label="Sheets" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

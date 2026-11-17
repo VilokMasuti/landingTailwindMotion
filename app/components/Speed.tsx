@@ -5,7 +5,10 @@ import LandingImges from "./LandingImges";
 
 const Speed = () => {
   return (
-    <Container className="pt-10 md:pt-20 lg:pt-32 ">
+    <Container
+      className="py-10 md:py-20 lg:py-32 overflow-y-clip mask-b-from-90%
+    "
+    >
       <article className="flex flex-col gap-5">
         <TitleHeading className=" font-semibold">
           Built for Speed
@@ -17,7 +20,14 @@ const Speed = () => {
         </SubHeading>
       </article>
 
-      <LandingImges />
+      <LandingImges
+        animation={{
+          initial: { opacity: 0, y: -40 },
+          whileInView: { opacity: 1, y: 40 },
+          transition: { duration: 0.7, ease: "easeOut" },
+        }}
+        className="scale-[0.82] md:scale-[0.9] lg:scale-[1] xl:scale-[1] mt-20"
+      />
     </Container>
   );
 };
